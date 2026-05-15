@@ -1,0 +1,68 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+    xmlns:core="sap.ui.core"
+    controllerName="am.hr.payroll.controller.Add">
+    <!-- To encapsulate other views inside -->
+    <Page title="Manage Product">
+        <VBox class="sapUiSmallMargin">
+            <f:SimpleForm id="SimpleFormChange354"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                title="Manage Product"
+                labelSpanXL="3"
+                labelSpanL="3"
+                labelSpanM="3"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="4"
+                emptySpanL="4"
+                emptySpanM="4"
+                emptySpanS="0"
+                columnsXL="1"
+                columnsL="1"
+                columnsM="1"
+                singleContainerFullSize="false">
+                <f:content>
+                    <Label text="Product Id"/>
+                    <Input id="prodId" value="{rosa>/prodData/PRODUCT_ID}" submit="onEnter"/>
+                    <Button icon="https://cdn-icons-png.flaticon.com/512/7466/7466619.png" type="Emphasized"
+                            tooltip="Load most expensive product" press="onLoadExpensive"></Button>
+                    <Label text="Name/Description"/>
+                    <Input value="{rosa>/prodData/NAME}"/>
+                    <Input value="{rosa>/prodData/DESCRIPTION}">
+                        <layoutData>
+                            <l:GridData span="XL1 L2 M2 S4"/>
+                        </layoutData>
+                    </Input>
+                    <Label text="Supplier Id"/>
+                    <Input value="{rosa>/prodData/SUPPLIER_ID}" showValueHelp="true" valueHelpRequest="onF4Help" />
+                    <Label text="Price/Currency"/>
+                    <Input value="{rosa>/prodData/PRICE}" type="Number">
+                        <layoutData>
+                            <l:GridData span="XL1 L2 M2 S4"/>
+                        </layoutData>
+                    </Input>
+                    <Input value="{rosa>/prodData/CURRENCY_CODE}"/>
+                    <Label text="Category"/>
+                    <Select id="country" selectedKey="{rosa>/prodData/CATEGORY}">
+                        <items>
+                            <core:Item text="Notebooks" key="Notebooks"/>
+                            <core:Item text="Projectors" key="Projectors"/>
+                            <core:Item text="Misc" key="Misc"/>
+                        </items>
+                    </Select>
+                </f:content>
+            </f:SimpleForm>
+        </VBox>
+        <Image class="sapUiLargeMarginBegin" id="myImg"></Image>
+        <footer>
+            <Toolbar >
+                <ToolbarSpacer ></ToolbarSpacer>
+                <Button id="idCreate" text="Create" press="onCreate" type="Accept"></Button>
+                <Button text="Clear" press="onClear" type="Reject"></Button>
+                <Button text="Delete" type="Negative" press="onDelete"></Button>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

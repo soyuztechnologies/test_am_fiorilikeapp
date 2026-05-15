@@ -1,0 +1,40 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:core="sap.ui.core"
+          xmlns:f="sap.ui.layout.form"
+          controllerName="am.hr.payroll.controller.View2">
+          <!-- To encapsulate other views inside -->
+    <Page title="View 2" showNavButton="true" navButtonPress="onBack">
+        <content>
+            <!-- Show a single BO instance details -->
+            <ObjectHeader title="{PRODUCT_ID} - {NAME}" intro="{DESCRIPTION}"
+                            number="{PRICE}" numberUnit="{CURRENCY_CODE}"
+                            icon="sap-icon://product"></ObjectHeader>
+
+            <!-- Icon Tab bar = Tabstrip -->
+            <IconTabBar >
+                <items>
+                    <!-- Tab 1 -->
+                    <IconTabFilter text="Basic Details" icon="sap-icon://warning" iconColor="Positive">
+                        <core:Fragment fragmentName="am.hr.payroll.fragments.moreInfo" type="XML" />
+                    </IconTabFilter>
+                    <!-- Tab 2 -->
+                    <IconTabFilter text="Suppliers" icon="sap-icon://supplier" iconColor="Neutral">
+                        <core:Fragment fragmentName="am.hr.payroll.fragments.suppliers" type="XML" />
+                    </IconTabFilter>
+                    <!-- Tab 3 -->
+                    <IconTabFilter text="Cities" icon="sap-icon://home" iconColor="Marker">
+                        <core:Fragment fragmentName="am.hr.payroll.fragments.cities" type="XML" />                        
+                    </IconTabFilter>
+                </items>
+            </IconTabBar>
+                            
+        </content>
+
+        <footer>
+            <Toolbar>
+                <ToolbarSpacer/>
+                <Button text="Save" type="Success" press="onSave"></Button>
+                <Button text="Clear" type="Reject" press="onCancel"></Button>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

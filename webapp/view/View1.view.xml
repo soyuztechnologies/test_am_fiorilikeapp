@@ -1,0 +1,47 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" 
+          controllerName="am.hr.payroll.controller.View1">
+          <!-- To encapsulate other views inside -->
+    <Page title="View 1">
+        <headerContent>
+            <Button tooltip="Go to View 2" icon="sap-icon://navigation-right-arrow" press="onGoToView2"/>
+        </headerContent>
+        <subHeader>
+            <Toolbar>
+                <SearchField id="mySearch" search="onSearch"></SearchField>
+            </Toolbar>
+        </subHeader>
+        <content>
+            <List id="myList"  mode="SingleSelectMaster" selectionChange="onSelectItem">
+                <headerToolbar>
+                    <Toolbar >
+                        <Button icon="sap-icon://delete" tooltip="delete" press="onDelete"></Button>
+                    </Toolbar>
+                </headerToolbar>
+                <!-- <items>
+                    <ObjectListItem title="{name}" intro="{healthBenefit}" 
+                    number="{price}" numberUnit="{curr}" icon="{image}" >
+                        <attributes>
+                            <ObjectAttribute title="Type" text="{taste}"></ObjectAttribute>
+                        </attributes>
+                        <firstStatus>
+                            <ObjectStatus text="{path: 'availability',
+                                                 formatter: '.formatter.getStatusText'}"
+                                                  state="{path: 'availability',
+                                                 formatter: '.formatter.getStatusState'}"
+                                                 ></ObjectStatus>
+                        </firstStatus>
+
+                    </ObjectListItem>
+                        
+                </items> -->
+            </List>
+            <!-- <Button text="Go to View 2" press="onGoToView2"/> -->
+        </content>
+        <footer>
+            <Toolbar >
+                <ToolbarSpacer ></ToolbarSpacer>
+                <Button text="Add" icon="sap-icon://add" press="onAdd"></Button>
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

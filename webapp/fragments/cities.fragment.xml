@@ -1,0 +1,19 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+    <!-- under 3rd Tab with agg. binding to cities = absolute path -->
+                        <Select items="{/cities}">
+                            <!-- relative path for child of dropdown -->
+                            <core:Item text="{name}" key="{name}" />
+                        </Select>
+
+                        <!-- Dropdown + Input -->
+                        <ComboBox items="{/cities}">
+                            <!-- relative path for child of dropdown -->
+                            <core:Item text="{name}" key="{name}" />
+                        </ComboBox>
+
+                        <!-- Dropdown + Input -->
+                        <MultiComboBox items="{/cities}">
+                            <!-- relative path for child of dropdown -->
+                            <core:Item text="{name}" key="{name}" />
+                        </MultiComboBox>
+</core:FragmentDefinition>

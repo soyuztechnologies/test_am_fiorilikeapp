@@ -1,0 +1,16 @@
+specVersion: "4.0"
+metadata:
+  name: fiorilikeapp
+type: application
+server:
+  customMiddleware:
+    - name: fiori-tools-proxy
+      afterMiddleware: compression
+      configuration:
+        backend:
+        - path: /sap
+        # replace with applied material server
+        # here we just map the sap system you want to connect via proxy
+        # just a temp setup while you are developing
+        # later this setup can be used to connect prodcution, test locally
+          url: http://s4hana10.saraswatitechnologies.in:8010

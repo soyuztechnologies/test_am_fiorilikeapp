@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <!-- Ui5 bootstrap which loads the SAPUI5 framework  and mobile libraries -->
+         <!-- data-sap-ui-resourceroots - create alias name for webapp directory where we keep all project files -->
+        <script src="https://ui5.sap.com/resources/sap-ui-core.js"
+                data-sap-ui-libs="sap.m"
+                data-sap-ui-theme="sap_fiori_3_dark"
+                data-sap-ui-bindingSyntax="complex"
+                data-sap-ui-resourceroots='
+                                {
+                                        "am.hr.payroll": "./"
+                            }'>
+        </script>
+        <script>
+
+            // Test our componentjs file
+            var oComponentContainer = new sap.ui.core.ComponentContainer({
+                name: "am.hr.payroll"
+            });
+
+            oComponentContainer.placeAt("content");
+
+        </script>
+    </head>
+    <body class="sapUiBody">
+        <div id="content"></div>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" 
+          controllerName="am.hr.payroll.controller.Empty">
+          <!-- To encapsulate other views inside -->
+    <Page title="Empty View">
+        <content>
+            <Image src="https://t4.ftcdn.net/jpg/05/96/69/67/360_F_596696722_NYezin2aCGfLPyVnI5P4UmZLg1jFwaRZ.jpg"
+             width="100%" ></Image>
+        </content>
+    </Page>
+</mvc:View>

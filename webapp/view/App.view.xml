@@ -1,0 +1,7 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" 
+          controllerName="am.hr.payroll.controller.App">
+          <!-- To encapsulate other views inside -->
+    <SplitApp id="appCon">
+
+    </SplitApp>
+</mvc:View>

@@ -1,0 +1,8 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" 
+          controllerName="am.hr.payroll.controller.View3">
+          <!-- To encapsulate other views inside -->
+    <Page title="Supplier Data" showNavButton="true" navButtonPress="onBack">
+        <ObjectHeader title="{name}" intro="{city}" icon="sap-icon://supplier"
+                    number="{sinceWhen}" numberUnit="{contactNo}"></ObjectHeader>
+    </Page>
+</mvc:View>
